@@ -2,8 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Nav.css";
 import { AuthContext } from "../../context/AuthContext";
 import { NavLink } from "react-router-dom";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 import axios from "axios";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 const Nav = ({ cart, setCart }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
