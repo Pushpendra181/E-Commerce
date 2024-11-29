@@ -1,0 +1,19 @@
+http://localhost:5000/user/createcategory
+
+
+{
+    "name":"toys"
+   
+}
+
+
+
+http://localhost:5000/user/createSubCategory
+
+{
+    "name": "hocky",
+    "categoryId": "3"
+}
+
+
+
