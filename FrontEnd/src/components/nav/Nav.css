@@ -1,0 +1,89 @@
+.Nav ul {
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+  }
+  .Nav li {
+    all: unset;
+    font-size: 1.5rem;
+    color: black;
+    
+  }
+  .Nav li:hover {
+    color: rgba(0, 0, 0, 0.766);
+    cursor: pointer;
+  }
+  .list-item {
+    all: unset;
+    text-decoration: none;
+    
+  }
+  .trolley {
+    display: flex;
+    position: relative;
+  }
+  .trolleyNum {
+    height: 1.2rem;
+    width: 1.2rem;
+    position: absolute;
+    top: -10%;
+    border-radius: 50%;
+    right: -40%;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: rgba(53, 119, 232, 0.827);
+    padding: 0.1rem;
+    place-items: center;
+  }
+  .logIn_Out {
+    all: unset;
+    background-color: blueviolet;
+  
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+  .logIn_Out:hover {
+    background-color: rgba(137, 43, 226, 0.848);
+    cursor: pointer;
+  }
+  .manu-nav-btn {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+  .cart{
+    all: unset;
+  }
+.cart {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+/* Style for the cart item count badge */
+.cart .span {
+  position: absolute;
+  top: -8px; 
+  right: -8px; 
+  background-color: rgb(114, 16, 211);
+  color: rgb(5, 5, 5);
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px; 
+  font-weight: bold;
+  line-height: 1;
+}
+
+  @media (max-width: 798px) {
+    /* body {
+      background-color: red;
+      width: 10rem;
+    } */
+  }
+  
