@@ -1,7 +1,9 @@
 import React from "react";
 import Nav from "../nav/Nav";
 import { NavLink } from "react-router-dom";
-import logo from "../../../public/images.png";
+// import logo from "../../../public/images.png";
+import logo from "../../../public/eCommerce-logo.jpg";
+
 import "./Header.css"
 
 const Header = ({ cart, setCart }) => {
@@ -16,6 +18,6 @@ const Header = ({ cart, setCart }) => {
       <Nav cart={cart} setCart={setCart} />
     </div>
   );
-};
+};   
 
 export default Header;

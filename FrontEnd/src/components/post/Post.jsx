@@ -62,7 +62,8 @@ const Post = ({ prop, addToCart, setData, data }) => {
   const { discription, price, path, id } = prop;
 
   return (
-    <div className="card">
+    <div className="Card-continar">
+      <div className="card">
       <img src={path} alt="Post" className="card-image" />
       <div className="card-content">
         <h2 className="name">Price: ${price}</h2>
@@ -78,6 +79,7 @@ const Post = ({ prop, addToCart, setData, data }) => {
         <button onClick={() => addToCart(prop)} className="AddToCartBtn">
           Add to Cart
         </button>
+      </div>
       </div>
     </div>
   );

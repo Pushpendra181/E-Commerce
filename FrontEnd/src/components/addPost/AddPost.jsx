@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import "./AddPost.css"
 
 const AddPost = () => {
   const [form, setForm] = useState({
@@ -83,12 +84,12 @@ const AddPost = () => {
   };
 
   return (
-    <div>
-      <h1>Add Post</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>price:</label>
-          <input
+    <div className="add-post-containe">
+      <h1 className="add-post-title">Add Post</h1>
+      <form  onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label className="form-label">price:</label>
+          <input className="form-input"
             type="text"
             name="price"
             onChange={handleChange}
@@ -96,19 +97,19 @@ const AddPost = () => {
             required
           />
         </div>
-        <div>
-          <label>discription:</label>
-          <input
+        <div className="form-group">
+          <label className="form-label">discription:</label>
+          <input className="form-input"
             type="text"
-            name="discription" // Corrected spelling here
+            name="discription" 
             onChange={handleChange}
             value={form.discription}
             required
           />
         </div>
-        <div>
-          <label>Category:</label>
-          <select
+        <div className="form-group">
+          <label className="form-label">Category:</label>
+          <select className="form-select"
             name="categoryId"
             onChange={handleCategoryChange}
             value={form.categoryId}
@@ -123,9 +124,9 @@ const AddPost = () => {
           </select>
         </div>
         {subcategories.length > 0 && (
-          <div>
-            <label>Subcategory:</label>
-            <select
+          <div className="form-group">
+            <label className="form-label">Subcategory:</label>
+            <select className="form-select"
               name="subcategoryId"
               onChange={handleChange}
               value={form.subcategoryId}
@@ -140,13 +141,13 @@ const AddPost = () => {
             </select>
           </div>
         )}
-        <div>
-          <label>Image:</label>
-          <input type="file" name="file" onChange={handleChange} required />
+        <div className="form-group">
+          <label className="form-label">Image:</label>
+          <input   className='form-select' type="file" name="file" onChange={handleChange} required />
         </div>
 
         {error && <p className="error-message">{error}</p>}
-        <button type="submit">Add Post</button>
+        <button type="submit" className="submit-button ">Add Post</button>
       </form>
     </div>
   );

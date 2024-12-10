@@ -1,10 +1,103 @@
 .data {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+
+.post-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.post-card-content {
+  padding: 15px;
+}
+
+.post-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.post-card-description {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.post-card-footer {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem ;
-  padding-top: 2rem;
-  
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+}
+
+.post-card-price {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #45a049;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .data {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .post-card {
+    border-radius: 8px;
+  }
+
+  .post-card-image {
+    height: 200px;
+  }
+
+  .post-card-title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .data {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .post-card-image {
+    height: 250px;
+  }
 }

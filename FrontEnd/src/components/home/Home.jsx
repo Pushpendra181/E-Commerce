@@ -35,7 +35,6 @@ function DataFetchingComponent({ setCart, cart }) {
     const itemInCart = cart.find((cartItem) => cartItem.id === item.id);
 
     if (itemInCart) {
-      // If the item is already in the cart, just increase the quantity
       const updatedCart = cart.map((cartItem) =>
         cartItem.id === item.id
           ? { ...cartItem, quantity: cartItem.quantity + 1 }
@@ -43,7 +42,7 @@ function DataFetchingComponent({ setCart, cart }) {
       );
       setCart(updatedCart);
     } else {
-      // If the item is not in the cart, add it with a quantity of 1
+    
       setCart([...cart, { ...item, quantity: 1 }]);
     }
   };
@@ -51,7 +50,7 @@ function DataFetchingComponent({ setCart, cart }) {
   return (
     <div className="data">
       {data.map((elem, index) => (
-        <Post
+        <Post 
           prop={elem}
           key={index}
           addToCart={addToCart}

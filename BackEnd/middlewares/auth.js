@@ -13,7 +13,8 @@ exports.AuthenticateToken = (req, res, next) => {
     if (err) {
       return res.status(403).json({ mes: "Invalid token" });
     }
-    req.user = user;
+    req.user = user;     
     next();
-  });
-};
+  });  
+};  
+ 

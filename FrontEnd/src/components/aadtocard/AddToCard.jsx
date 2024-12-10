@@ -39,26 +39,24 @@ const AddToCart = ({ cart, setCart }) => {
 
   return (
     <div className="addToCart">
-      <h1>Your Cart</h1>
+      <h1 className="cart-title">Your Cart</h1>
 
       {cart.length > 0 ? (
         <>
           {cart.map((item, index) => (
-            <div key={index} className="cart-item">
-              <img src={item.path} alt={item.description} />
-              <h2>{item.discription}</h2>
-              <p>Price: ${item.price}</p>
+            <div key={index} >
+              <img className="cart-item-image" src={item.path} alt={item.description} />
+              <h2 className="discription">{item.discription}</h2>
+              <p className="cart-item-price">Price: ${item.price}</p>
               <div className="quantity-controls">
-                <button onClick={() => decreaseQuantity(index)}>-</button>
-                <span>{item.quantity}</span>
-                <button onClick={() => increaseQuantity(index)}>+</button>
+                <button className="btn" onClick={() => decreaseQuantity(index)}>-</button>
+                <span className="item-quantiy">{item.quantity}</span>
+                <button className="inc-btn" onClick={() => increaseQuantity(index)}>+</button>
               </div>
 
-              <button
+              <button   className="remove-btn"
                 onClick={() => removeFromCart(index)}
-                className="remove-btn"
-              >
-                Remove from Cart
+               > Remove from Cart
               </button>
             </div>
           ))}
@@ -67,7 +65,7 @@ const AddToCart = ({ cart, setCart }) => {
           </div>
         </>
       ) : (
-        <p>Your cart is empty.</p>
+        <p className="empty">Your cart is empty.</p>
       )}
     </div>
   );

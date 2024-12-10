@@ -8,8 +8,8 @@ const Post = dataBaseConnection.define("post", {
   price: {
     type: DataTypes.INTEGER,
     allowNull: false,
-  },
-
+  },   
+   
   discription: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -17,7 +17,7 @@ const Post = dataBaseConnection.define("post", {
   path: {
     type: DataTypes.STRING,
     // allowNull: false,
-  },
+  },   
   categoryId: {
     type: DataTypes.INTEGER,
     references: {

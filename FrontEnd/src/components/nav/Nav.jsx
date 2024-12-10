@@ -5,11 +5,12 @@ import { NavLink } from "react-router-dom";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 import axios from "axios";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
+// import profilelogo from '../../../public/profile_logo.avif'
 
 
 const Nav = ({ cart, setCart }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const { logout } = useContext(AuthContext);
+  const { logout } = useContext(AuthContext);   
 
   useEffect(() => {
     const storedItems = localStorage.getItem("cart");
@@ -44,21 +45,27 @@ const Nav = ({ cart, setCart }) => {
   };
 
   return (
+    
     <div className="Nav">
+       <div className="searchbar">
+        <input type="text" placeholder="Search...." />
+        <button>Search</button>
+       </div>
       <ul>
         <li>
           <NavLink to="/home" className="list-item">
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/profile" className="list-item">
-            My Profile
-          </NavLink>
-        </li>
+        
         <li>
           <NavLink to="/addpost" className="list-item logIn_Out">
             Add Post
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" className="list-item">
+          About
           </NavLink>
         </li>
 
